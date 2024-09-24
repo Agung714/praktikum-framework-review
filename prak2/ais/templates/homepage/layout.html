@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock %} - AIS</title>
     {% load django_bootstrap5 %} {% bootstrap_css %}
+    <!-- Penggunaan Static -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="icon" href="{% static 'images/logo.jpg' %}" type="image/jpeg" />
+    <!-- Penggunaan Static -->
 </head>
 
 <body>
@@ -22,16 +27,12 @@
                         <a class="nav-link active" href="/">Homepage</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">Tentang</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container mt-4">
-        {% block content %}
-        {% endblock %}
-    </div>
+    <div class="container mt-4">{% block content %} {% endblock %}</div>
     {% bootstrap_javascript %}
 </body>
 
