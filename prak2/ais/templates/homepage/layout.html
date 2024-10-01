@@ -27,11 +27,16 @@
                         <a class="nav-link active" href="/">Homepage</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'student_index' %}">Mahasiswa</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container mt-4">{% block content %} {% endblock %}</div>
     {% bootstrap_javascript %}
 </body>
