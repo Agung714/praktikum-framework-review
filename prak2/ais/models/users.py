@@ -13,4 +13,4 @@ class Users(models.Model):
     role = models.IntegerField(choices=ROLE_CHOICES) # 1 = Student, 2 = Teacher
 
     def __str__(self):
-        return self.username
+        return self.username 
